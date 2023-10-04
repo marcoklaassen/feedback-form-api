@@ -1,6 +1,5 @@
-# feedback-form api
+# Feedback Form API
 
-Feedback Form API
 
 ```
 curl -X POST -i \
