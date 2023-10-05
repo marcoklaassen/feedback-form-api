@@ -10,17 +10,17 @@ http://localhost:8080/feedback
 
 ## Create Keystore
 
-save ca.crt from kafka-cluster to file
+Save ca.crt from kafka-cluster to file
 ```
 oc get secret -n feedback-app dev-feedback-app-messaging-cluster-ca-cert -o jsonpath='{.data.ca\.crt}' | base64 -d > ca.crt
 ```
 
-import ca.crt to truststore
+Import ca.crt to truststore
 ```
 keytool -import -trustcacerts -alias kafka -file ca.crt -keystore clientkeystore.jks
 ```
 
-create secret 
+Create secret 
 ```
 oc create secret generic kafka-keystore --from-file=clientkeystore.jks
 ``````
