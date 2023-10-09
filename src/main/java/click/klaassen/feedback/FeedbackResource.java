@@ -23,5 +23,4 @@ public class FeedbackResource {
         service.publishFeedback(feedback);
         return feedback;
     }
-
 }
