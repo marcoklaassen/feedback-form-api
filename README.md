@@ -22,5 +22,5 @@ keytool -import -trustcacerts -alias kafka -file ca.crt -keystore clientkeystore
 
 Create secret 
 ```
-oc create secret generic kafka-keystore --from-file=clientkeystore.jks
+oc create secret generic kafka-keystore --from-file=clientkeystore.jks --from-literal=truststore.password=<keystore-password>
 ```
