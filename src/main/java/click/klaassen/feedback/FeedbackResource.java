@@ -19,7 +19,7 @@ public class FeedbackResource {
 
     @POST
     public Feedback add(Feedback feedback) {
-        log.info("Feedback form got rating: {}", feedback);
+        log.info("Feedback form got rating from BSH demo: {}", feedback);
         service.publishFeedback(feedback);
         return feedback;
     }
